@@ -11,7 +11,7 @@ class Ping extends Command {
         const startTime = Date.now();
         message.channel.send(`Pinging...`).then(msg => {
             const endTime = Date.now();
-            msg.edit(`Pong! | Client Ping: ${endTime - startTime}ms | API Latency: ${Math.floor(this.client.pings[0])}ms`);
+            msg.edit(`Pong! | Client Ping: ${endTime - startTime}ms | Websocket Ping: ${Math.floor(this.client.ws.ping)}ms`);
         });
     }
 }

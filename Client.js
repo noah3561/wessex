@@ -13,7 +13,7 @@ class Client extends AkairoClient {
 	
 	this.commandHandler = new CommandHandler(this, {
 		directory: path.join(__dirname, "Commands"),
-		prefix: "L$"
+		prefix: "w!"
     });
     
     this.listenerHandler = new ListenerHandler(this, {
@@ -28,27 +28,15 @@ class Client extends AkairoClient {
 	this.commandHandler.loadAll();
 	this.colors = {
 		"red": 0xFF0000,
-		"dark_red": 0xCC0000,
-		"maroon": 0x990000,
 		"green": 0x00FF00,
 		"yellow": 0xFFFF00,
-		"blue": 0x0000FF,
 		"orange": 0xFFA500,
-		"purple": 0x800080,
 		"teal": 0x00FFFF,
-		"dark_green": 0x006600,
-		"black": 0x000001,
-		"white": 0xFFFFFF,
 		"blank": 0x36393E
 	};
-	this.emojis = {
-        "greenTick": "<:vyzeGreenTick:488184521028665344>",
-        "redTick": "<:vyzeRedTick:488184571108655124>",
-        "cpu": "<:vyzeCPU:488187113809117195>",
-        "ram": ""
+	this.constants = {
+        "botInvite": "https://discordapp.com/oauth2/authorize?&client_id=461984672944095233&scope=bot&permissions=8"
 	};
-	// this.constants = {
-	// };
 	
 	}
 	
